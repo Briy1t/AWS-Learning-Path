@@ -18,4 +18,4 @@ Por ello dividiremos en temario en 9 bloques.
 
 ---
 
-1. Bloque 1 
+1. Bloque 1 : Fundamentos de cloud y AWS
