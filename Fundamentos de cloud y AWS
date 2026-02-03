@@ -4,6 +4,7 @@
 
 Cloud: Como bien se sabe hoy en dia en el mundo se manejan grandes volumenes de datos que no es eficiente ni escalable,
 por ello los datos hoy en dia se encuntran en la nube que son servidores especializados en su manejo : carga , almacenar , copiar etc.
+La nube permite acceder a recursos de computación, almacenamiento y redes bajo demanda, sin necesidad de infraestructura física propia.
 
 AWS: `Amazon Web Services` Es una plataforma que ofrece mas de 200 servicios en la nube donde AWS se encarga de lo físico y tú de la configuración aunque claro veremos las diferentes 
 ventajas de su uso.
@@ -95,13 +96,13 @@ A mayor tamaño = más CPU, más RAM, más red → más costoso.
 
 Ejemplo dentro de la familia t2:
 
-t2.micro  → pequeño, barato
+t2.micro  =pequeño, barato
 
-t2.small  → un poco más grande
+t2.small  = un poco más grande
 
-t2.medium  → más CPU y RAM
+t2.medium  = más CPU y RAM
 
-t2.large  → mucho más potente y más caro
+t2.large  = mucho más potente y más caro
 
 Esto funciona igual en todas las familias (m, c, r, g…).
 
@@ -117,6 +118,7 @@ Lo que es especial en la familia t es el sistema de créditos de CPU (burstable 
 ---
 
 ## EBS 
+
 Es el disco duro de la instancia EC2: puede almacenar: 
 -El sistema operativo (Linux o Windows) viene dentro de la `AMI`, y se copia al volumen EBS cuando se crea la instancia.
 -Tus aplicaciones, tus archivos.
