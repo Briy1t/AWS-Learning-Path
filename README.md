@@ -35,3 +35,9 @@ En este bloque encontrarás:
 
 El objetivo es que al terminar este bloque tengas una visión clara de cómo funciona AWS a nivel fundamental y puedas avanzar con seguridad hacia los siguientes temas.
 
+## Documentación completa del Bloque 1
+
+Puedes leer el contenido completo aquí:  
+ [Documentación del Bloque 1](Bloque_1_Fundamentos_de_la_nube.md)
+
+
