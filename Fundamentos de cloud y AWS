@@ -2,11 +2,12 @@
 
 # Fundamentos de cloud y AWS
 
-***Cloud***: Como bien se sabe hoy en dia en el mundo se manejan grandes volumenes de datos que no es eficiente ni escalable,
+Cloud: Como bien se sabe hoy en dia en el mundo se manejan grandes volumenes de datos que no es eficiente ni escalable,
 por ello los datos hoy en dia se encuntran en la nube que son servidores especializados en su manejo : carga , almacenar , copiar etc.
 
-***AWS***: `Amazon Web Services` Es una plataforma que ofrece mas de 200 servicios en la nube donde AWS se encarga de lo físico y tú de la configuración aunque claro veremos las diferentes 
+AWS: `Amazon Web Services` Es una plataforma que ofrece mas de 200 servicios en la nube donde AWS se encarga de lo físico y tú de la configuración aunque claro veremos las diferentes 
 ventajas de su uso.
+
 
 ## Tipos de Servicios AWS (Modelos de Servicio)
 
@@ -90,7 +91,7 @@ Los tamaños más comunes son:
 -32xlarge
 
 No necesitas memorizar todos lo importante es :
-A mayor tamaño → más CPU, más RAM, más red → más costoso.
+A mayor tamaño = más CPU, más RAM, más red → más costoso.
 
 Ejemplo dentro de la familia t2:
 
@@ -106,6 +107,13 @@ Esto funciona igual en todas las familias (m, c, r, g…).
 
 Lo que es especial en la familia t es el sistema de créditos de CPU (burstable performance).
 
+# Tipos de compra de EC2:
+
+-On‑Demand: flexible, pagas por uso.
+-Reserved: hasta 75% más barato, compromiso 1–3 años.
+-Savings Plans: hasta 72% más barato, compromiso de gasto.
+-Spot: hasta 90% más barato, interrumpible.
+-Dedicated Host: Servidor físico completo, para requisitos de licencias o cumplimiento
 ---
 
 ## EBS 
@@ -150,6 +158,7 @@ Se usa para:
 -procesamiento intensivo que no necesita guardarse
 -No sirve para almacenar información importante. Para eso se usa EBS o S3.
 
+---
 # S3
 Es un tipo de almacenamiento que está fuera de EC2, es decir, no forma parte de una instancia.
 No es un disco duro como EBS.
@@ -167,26 +176,27 @@ Si guardas 10,000,000 objetos, estadísticamente solo 1 podría perderse en 10,0
 -escalable
 -barata
 
-### costo
-2. ¿S3 cobra por subir, copiar, borrar?
-Aquí es donde mucha gente se confunde, pero tú ya lo estás entendiendo.
+# costo de S3
 
-# S3 cobra por:
+## S3 cobra por:
 -Almacenamiento (GB por mes)
 -Peticiones PUT (subir)
 -Peticiones GET (descargar)
 -Copiar objetos
 -Transferencia de datos hacia afuera de AWS
 
-#S3 NO cobra por:
+## S3 NO cobra por:
 -Eliminar objetos
 -Transferencia dentro de la misma región
--Listar objetos (LIST) → muy barato, casi simbólico
+-Listar objetos (LIST) = muy barato, casi simbólico
 
-## Versionado en S3
+# Versionado en S3
 Puedes activar el versionado en un bucket.
-"Un bucket de S3 es un contenedor lógico donde guardas objetos (archivos + metadatos). No es un contenedor Docker. No ejecuta nada. Está fuera de EC2 y solo sirve para almacenar datos."
-Esto permite:
+
+"Un bucket de S3 es un contenedor lógico donde guardas objetos (archivos + metadatos).
+No es un contenedor Docker. No ejecuta nada.
+Está fuera de EC2 y solo sirve para almacenar datos."
+
 
 -guardar cada versión de un archivo
 -recuperar versiones anteriores
@@ -196,11 +206,62 @@ Esto permite:
 La marca de borrado no elimina el archivo realmente; solo indica que la versión actual está “borrada”.
 Las versiones anteriores siguen existiendo.
 
-           
+---
 
+# Modelo de responsabilidad compartida 
 
+`AWS`: se encarga de la infraestructura fisisca y virtual de la nube.
 
+tu te encargas de `Security IN the Cloud` te encargas de configurar bien tu entorno en la nube.
 
+AWS -> Infraestructura y servicios adminsitrados como  (RDS, DynamoDB, S3) a nivel de infraestructura
+Tú  -> Configuración, datos, permisos, redes, aplicaciones
 
+---
 
+# Edge Locations
 
+Son puntos de presencia distribuidos por el mundo para entregar contenido con baja latencia.
+se encuentran en ella:
+
+-CloudFront (CDN)
+-Route 53 (DNS global)
+-AWS Global Accelerator
+
+---
+## datos importantes
+
+#Alta disponibilidad
+
+-Múltiples AZ
+-Load Balancer
+-Auto Scaling
+-Evitar un único punto de fallo
+
+#Escalabilidad
+
+-Vertical: más CPU/RAM
+-Horizontal: más instancias
+
+# Load Balancer
+
+-Reparte tráfico
+-Evita que una instancia se sobrecargue
+-Detecta instancias sanas
+
+*** Ayuda a alta disponibilidad y escalabilidad horizontal. ***
+
+# Auto Scaling Group
+
+-Crea más instancias cuando hay más carga
+-Elimina instancias cuando baja la carga
+-Mantiene un número mínimo de instancias
+
+*** Ayuda a escalabilidad horizontal y resiliencia. ***
+
+# Múltiples AZ
+
+-Si una AZ falla, la otra sigue funcionando
+-Tus instancias están duplicadas en varias zonas
+
+***Esto es alta disponibilidad pura.***
