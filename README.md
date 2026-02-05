@@ -40,4 +40,27 @@ El objetivo es que al terminar este bloque tengas una visión clara de cómo fun
 Puedes leer el contenido completo aquí:  
  [Documentación del Bloque 1](Bloque_1_Fundamentos_de_la_nube.md)
 
+## Bloque 2 – Redes en AWS (Fundamentos)
+
+Esta primera parte del bloque introduce los conceptos esenciales para entender cómo funciona la red dentro de una VPC. El objetivo es comprender cómo se conectan las instancias, cómo fluye el tráfico y qué componentes controlan la seguridad y el acceso.
+
+En esta sección encontrarás:
+
+- Qué es una VPC y cómo se estructura  
+- Tipos de subnets y sus diferencias (pública, privada, aislada)  
+- Cómo funcionan NAT Gateway e Internet Gateway  
+- Qué son las Route Tables y cómo determinan el flujo  
+- Seguridad en red: Security Groups y NACLs  
+- Puertos esenciales para comunicación  
+- Flujo de tráfico básico dentro de la VPC  
+- Introducción a Endpoints para acceso privado a servicios de AWS  
+
+Esta parte sienta las bases para la sección avanzada, donde veremos VPC Peering, Bastion Host, flujo entre VPCs, ENIs y servicios privados.
+
+## Documentación completa del Bloque 2 (Fundamentos)
+
+Puedes leer el contenido completo aquí:  
+ [Documentación del Bloque 2](Boque_2_Redes_AWS.md)
+
+
 
