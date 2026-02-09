@@ -18,7 +18,7 @@ Por ello dividiremos en temario en 9 bloques.
 
 ---
 
-# Bloque 1 — Fundamentos de Cloud y AWS
+## Bloque 1 — Fundamentos de Cloud y AWS
 
 Este bloque introduce los conceptos esenciales para entender qué es la nube y cómo funciona AWS.  
 Aquí se construyen las bases necesarias para avanzar hacia servicios más específicos y comprender cómo se organiza la infraestructura en la nube.
@@ -35,7 +35,7 @@ En este bloque encontrarás:
 
 El objetivo es que al terminar este bloque tengas una visión clara de cómo funciona AWS a nivel fundamental y puedas avanzar con seguridad hacia los siguientes temas.
 
-## Documentación completa del Bloque 1
+### Documentación completa del Bloque 1
 
 Puedes leer el contenido completo aquí:  
  [Documentación del Bloque 1](Bloque_1_Fundamentos_de_la_nube.md)
@@ -57,10 +57,17 @@ En esta sección encontrarás:
 
 Esta parte sienta las bases para la sección avanzada, donde veremos VPC Peering, Bastion Host, flujo entre VPCs, ENIs y servicios privados.
 
-## Documentación completa del Bloque 2 (Fundamentos)
-
+### Fundamentos
 Puedes leer el contenido completo aquí:  
  [Documentación del Bloque 2](Boque_2_Redes_AWS.md)
+
+### Subtema 
+- **Redes avanzadas** nivel 1 
+Este subtema reúne los conceptos esenciales para entender cómo funcionan las conexiones privadas dentro de AWS: cómo tu VPC accede a servicios sin internet, cómo se comunican varias VPC entre sí, cómo se gestionan las tarjetas de red (ENI) y cuáles son las dos formas de acceder a instancias privadas (Bastion vs SSM). También incluye los errores típicos que suelen romper la conectividad en arquitecturas reales.
+
+### Redes avanzadas
+Puedes leer el contenido completo aquí: 
+ [Sub_tema_Resdes_avanzadas_nivel_1](Bloque_2_sub_tema_Resdes_avanzadas_Nivel_1.md)
 
 
 
