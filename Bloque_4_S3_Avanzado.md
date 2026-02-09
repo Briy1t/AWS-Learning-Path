@@ -112,3 +112,69 @@ Dos tipos:
 - PUT de la réplica
 - almacenamiento en el bucket destino
 - Sirve para disponibilidad, resiliencia y cumplimiento.
+
+## Lifecycle Rules
+Son una forma de automatizar el ciclo de vida de los objetos en **S3** para reducir costos, archivar datos y manejar versiones antiguas sin intervención manual.
+
+Permiten definir:
+-Qué objetos afectan (filtro)
+-Qué acción realizar (mover, archivar, borrar)
+-Cuándo hacerlo (días desde la creación)
+
+Se usan para mover datos a clases de almacenamiento más baratas (IA, One Zone‑IA, Glacier, Deep Archive), 
+borrar versiones antiguas, limpiar delete markers y controlar el crecimiento del bucket cuando hay versioning.
+
+El flujo típico es:
+- Standard → Standard‑IA → Glacier → Deep Archive → borrar.
+
+Son muy usadas en logs, backups, datos históricos y cualquier archivo que no se consulta frecuentemente, porque el ahorro frente a **S3 Standar**d puede ser enorme.
+
+
+|Día	|Acción |	Clase |
+|:--|:--|:--|
+|30	|Mover |	Standard‑IA |
+|90	|Mover	| Glacier Instant Retrieval |
+|365	|Mover	 | Glacier Deep Archive |
+|730	|Borrar|	—|
+
+## Las storage classes 
+Son los tipos de almacenamiento que ofrece S3. 
+Cada una tiene un costo distinto, una velocidad de acceso distinta y un propósito diferente. 
+Las lifecycle rules existen justamente para mover objetos entre estas clases y optimizar costos.
+
+**Clases principales:**
+- **S3 Standard** 
+Acceso frecuente. Es la clase por defecto. Rápida y más cara.
+
+- **S3 Standard‑IA (Infrequent Access)**
+Para datos que lees poco. Más barata, pero cobra por lectura.
+
+- **S3 One Zone‑IA**
+Igual que IA pero en una sola AZ. Más barata, menos resiliente.
+
+- **S3 Glacier Instant Retrieval**  
+Para archivos que casi no se consultan, pero necesitas recuperar rápido.
+
+- **S3 Glacier Flexible Retrieval**
+Más barato que Instant. Recuperación más lenta.
+
+-**S3 Glacier Deep Archive**
+La opción más barata. Recuperación muy lenta. Ideal para archivo a largo plazo.
+
+Por qué importan tanto:
+
+- Determinan el costo por GB
+- Determinan la velocidad de recuperación
+- Determinan si hay costo por lectura
+- Determinan si puedes usarlas para archivos activos o archivados
+
+
+
+|Clase	|Costo	|Velocidad|Uso|
+|:--|:--|:--|:--|
+|Standard	|Alto |	Inmediato|Uso diario|
+|Standard‑IA	|Medio|	Inmediato	|Acceso ocasional|
+|One Zone‑IA|	Bajo	|Inmediato|	Datos recreables|
+|Glacier Instant	|Muy bajo|	Rápido	|Archivado accesible|
+|Glacier Flexible	|Muy bajo|	Minutos‑horas	|Archivado|
+|Glacier Deep Archive	|Bajísimo	|Horas	|Archivado largo plazo|
