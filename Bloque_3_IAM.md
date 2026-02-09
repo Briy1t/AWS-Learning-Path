@@ -49,7 +49,28 @@ Tienen cuatro partes:
 - Effect → allow o deny
 - Condition → condiciones opcionales
 
-Principio clave:
+**"Deny"** siempre gana sobre **"Allow"**
+
+---
+
+La estructura de una policy
+‎
+```text
+‎
+‎`json
+‎{
+‎  "Version": "2012-10-17",
+‎  "Statement": [
+‎    {
+‎      "Effect": "Allow",
+‎      "Action": "s3:GetObject",
+‎      "Resource": "arn:aws:s3:::mi-bucket/*"
+‎    }
+‎  ]
+‎}
+```
+---
+**Principio clave:**
 **Least privilege →**dar solo lo necesario, ni más ni menos.
 
 ### Tipos de policies**
@@ -79,13 +100,20 @@ Es la política que define quién puede asumir un rol.
 - Más seguras que las claves permanentes.
 
 ## IAM Best Practices
+ 
+1. No usar el usuario root para tareas diarias
+2. Activar MFA en root, administradores y usuarios sensibles
+3. No usar claves de acceso permanentes
+4. Usar roles siempre para servicios
+5. Aplicar el principio de least privilege
+6. Rotar o eliminar claves si existen
+7. Usar grupos para usuarios humanos
+8. Revisar permisos con Access Analyzer
+9. Usar roles para acceso entre cuentas (cross‑account)
+10. Evitar inline policies cuando sea posible
 
-1. Usar roles, no usuarios
-2. No usar claves de acceso si no es necesario
-3. Activar MFA en usuarios
-4. Aplicar least privilege
-5. No usar el usuario root
-6. Revisar permisos regularmente
+Si un servicio necesita permisos, dale un rol.
+Si una persona necesita permisos, dale un grupo.
 
 ## Access Analyzer
 Servicio gratuito de AWS que analiza:
