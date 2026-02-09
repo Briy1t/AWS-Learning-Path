@@ -175,6 +175,6 @@ Por qué importan tanto:
 |Standard	|Alto |	Inmediato|Uso diario|
 |Standard‑IA	|Medio|	Inmediato	|Acceso ocasional|
 |One Zone‑IA|	Bajo	|Inmediato|	Datos recreables|
-|Glacier Instant	|Muy bajo|	Rápido	|Archivado accesible|
+|Glacier Instant	|Muy-medio|	Rápido	|Archivado accesible|
 |Glacier Flexible	|Muy bajo|	Minutos‑horas	|Archivado|
 |Glacier Deep Archive	|Bajísimo	|Horas	|Archivado largo plazo|
