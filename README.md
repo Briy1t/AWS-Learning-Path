@@ -1,4 +1,4 @@
-# AWS-_Certified_Cloud_Practitioner(CLF-C02)_planDeEstudio-
+# AWS_Certified_Cloud_Practitioner(CLF-C02)_planDeEstudio-
 Documentación del aprendizaje previo para presentar el examen
 
 En el siguiente plan de estudio se dividira en 9 bloques 
