@@ -69,5 +69,11 @@ Este subtema reúne los conceptos esenciales para entender cómo funcionan las c
 Puedes leer el contenido completo aquí: 
  [Sub_tema_Resdes_avanzadas_nivel_1](Bloque_2_sub_tema_Resdes_avanzadas_Nivel_1.md)
 
+## Bloque 3 — IAM (Identity and Access Management)
 
+Este bloque introduce los conceptos básicos de IAM, explicando cómo se gestionan identidades y permisos en AWS mediante usuarios, grupos, roles y policies. Resume cómo funcionan las credenciales temporales (STS), las trust policies, el principio de least privilege y las diferencias entre permisos managed e inline. También incluye buenas prácticas de seguridad, el uso del Access Analyzer y una visión de los roles que se verán más adelante al trabajar con otros servicios.
+
+### IAM
+Puedes leer el contenido completo aquí: 
+ [Bloque 3 — IAM](Bloque_3_IAM.md)
 
