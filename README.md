@@ -1,7 +1,7 @@
-# AWS_Certified_Cloud_Practitioner(CLF-C02)_planDeEstudio-
-Documentación del aprendizaje previo para presentar el examen
+# AWS Certified Cloud Practitioner(CLF-C02)
+Documentación del aprendizaje previo para presentar el examen.
 
-En el siguiente plan de estudio se dividira en 9 bloques 
+En el siguiente plan de estudio se dividira en bloques. 
 
 # Objetivo
 
@@ -76,4 +76,11 @@ Este bloque introduce los conceptos básicos de IAM, explicando cómo se gestion
 ### IAM
 Puedes leer el contenido completo aquí: 
  [Bloque 3 — IAM](Bloque_3_IAM.md)
+
+ ## Bloque 4 — S3 Avanzado
+Este bloque profundiza en las funciones avanzadas de S3: cómo se controla el acceso mediante bucket policies, por qué las ACLs casi no se usan hoy, cómo funciona el versioning para proteger datos, las opciones de cifrado, el impacto de Block Public Access y los distintos tipos de replicación entre buckets. Es un subtema centrado en seguridad, control de acceso y protección de datos dentro de S3.
+
+ ### S3 Avanzado
+ Puedes leer el contenido completo aquí: 
+ [Bloque 4 — S3 Avanzado](Bloque_4_S3_Avanzado.md)
 
