@@ -83,5 +83,5 @@ Este bloque profundiza en las funciones avanzadas de S3: cómo se controla el ac
 Este bloque explica cómo conectar tu infraestructura local con AWS mediante VPN o Direct Connect, cómo se organiza una VPC real, y cómo funcionan los componentes clave para manejar tráfico y escalar aplicaciones: ALB, NLB, Target Groups, Auto Scaling Groups y User Data.
 También incluye las 7 capas del modelo OSI, con énfasis en las capas más usadas en AWS (4 y 7).
 
-### Bloque 5 — Redes Híbridas ...
+### Redes Híbridas ...
 Puedes leer el contenido completo aquí: [Bloque 5 — Redes Híbridas, Load Balancers, Auto Scaling y Modelo OSI](Bloque_5_RedesHíbridas_Balanceadores_Modelo_OSI.md)
