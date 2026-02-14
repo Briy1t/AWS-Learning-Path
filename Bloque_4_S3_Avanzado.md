@@ -95,7 +95,7 @@ Tres opciones:
 
 1. **SSE-S3 →** AWS gestiona la clave
 2. **SSE-KMS →** tú gestionas la clave KMS (se cobra por uso)
-3.**SSE-C →** tú aportas la clave (menos usado)
+3. **SSE-C →** tú aportas la clave (menos usado)
 
 ## Block Public Access
 Si está activado, ningún objeto puede ser público, aunque una policy diga allow.
