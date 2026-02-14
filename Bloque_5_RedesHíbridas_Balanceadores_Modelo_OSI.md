@@ -104,7 +104,7 @@ Es clave para automatizar servidores sin intervención humana.
 
 Énfasis en examen
  - Capa 7 → ALB
- - Capa 4 → NLBCapa	Nombre	Qué hace	Relevancia en AWS
+ - Capa 4 → NLB
 
 
 ## Listeners
