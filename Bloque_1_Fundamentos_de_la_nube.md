@@ -126,7 +126,7 @@ Lo especial de la familia **t** es el sistema de créditos de CPU (*burstable pe
 
 **EBS (Elastic Block Store)** es el “disco duro” de la instancia EC2. Puede almacenar:
 
-- El sistema operativo (Linux o Windows), que viene dentro de la **AMI** y se copia al volumen EBS al crear la instancia.
+- El sistema operativo (Linux o Windows, Ubuntu, ect), **AMI** tiene la plantilla del SO de la instancia.
 - Tus aplicaciones y archivos.
 
 Características:
