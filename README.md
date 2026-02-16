@@ -88,6 +88,6 @@ Puedes leer el contenido completo aquí: [Bloque 5 — Redes Híbridas, Load Bal
 
 ## Bloque 6 — Bases de Datos en AWS
 Este bloque resume los servicios de bases de datos más usados en AWS. Explica las diferencias entre bases SQL y NoSQL, cómo funciona RDS (Multi‑AZ, Read Replicas), el modelo clave‑valor de DynamoDB, las ventajas de Aurora y cuándo usar cachés como ElastiCache o DAX para mejorar el rendimiento.
-### Bloque 6 — Bases de Datos en AWS
+### Bases de Datos en AWS
 Puedes leer el contenido completo aquí: [Bloque 6 — Bases de Datos en AWS](Bloque_6_base_de_datos_y_cache_aws.md)
 
