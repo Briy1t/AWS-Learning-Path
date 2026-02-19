@@ -1,11 +1,11 @@
 # AWS Certified Cloud Practitioner(CLF-C02)
-Documentación del aprendizaje previo para presentar el examen.
+Documentación del aprendizaje 
 
 En el siguiente plan de estudio se dividira en bloques. 
 
 # Objetivo
 
-Tener buenos fundamentos para presentar el examen , el objetivo no es solo obtener la certificación si no tambien aprender de forma profunda,
+Tener buenos fundamentos para presentar el examen , el objetivo no es obtener la certificación si no aprender ,
 sabiendo que la idea principal no es solo obtener el certificado sino saber trabajar en la nube. 
 mediante esta documentación podre consolidar conceptos e interiorizarlo.
 
