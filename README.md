@@ -35,9 +35,9 @@ En este bloque encontrarás:
 
 El objetivo es que al terminar este bloque tengas una visión clara de cómo funciona AWS a nivel fundamental y puedas avanzar con seguridad hacia los siguientes temas.
 
-### Bloque 1
+### Fundamentos de Cloud y AWS
 
-Puedes leer el contenido completo aquí: [Documentación del Bloque 1](Bloque_1_Fundamentos_de_la_nube.md)
+Puedes leer el contenido completo aquí: [Bloque 1 — Fundamentos de Cloud y AWS](Bloque_1_Fundamentos_de_la_nube.md)
 
 ## Bloque 2 – Redes en AWS (Fundamentos)
 
