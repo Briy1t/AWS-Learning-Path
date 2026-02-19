@@ -56,8 +56,8 @@ En esta sección encontrarás:
 
 Esta parte sienta las bases para la sección avanzada, donde veremos VPC Peering, Bastion Host, flujo entre VPCs, ENIs y servicios privados.
 
-### Fundamentos
-Puedes leer el contenido completo aquí: [Documentación del Bloque 2](Boque_2_Redes_AWS.md)
+### Redes en AWS (Fundamentos)
+Puedes leer el contenido completo aquí: [Bloque 2 – Redes en AWS (Fundamentos)](Boque_2_Redes_AWS.md)
 
 ### Subtema 
 - **Redes avanzadas** nivel 1 
