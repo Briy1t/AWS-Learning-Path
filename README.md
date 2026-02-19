@@ -91,3 +91,43 @@ Este bloque resume los servicios de bases de datos más usados en AWS. Explica l
 ### Bases de Datos en AWS
 Puedes leer el contenido completo aquí: [Bloque 6 — Bases de Datos en AWS](Bloque_6_base_de_datos_y_cache_aws.md)
 
+## Bloque 7 — Monitoreo y Observabilidad (CloudWatch, CloudTrail, AWS Config)
+Este bloque explica los servicios que permiten monitorear, auditar y controlar cambios dentro de AWS. Aquí aprenderás cómo ver métricas, logs, alarmas, historial de acciones y cumplimiento de reglas. Es uno de los bloques más preguntados en el examen.
+En este bloque encontrarás:
+- CloudWatch: métricas, logs, alarmas, dashboards y acciones automáticas
+- CloudTrail: auditoría, quién hizo qué, registro de acciones
+- AWS Config: historial de cambios, cumplimiento de reglas, recursos NON‑COMPLIANT
+- Diferencias claras entre CloudWatch vs CloudTrail vs Config
+- Ejemplos típicos del examen
+### Monitoreo y Observabilidad
+Puedes leer el contenido completo aquí: [Bloque_7_Monitoreo_y_Obeservabilidad.md)
+
+
+## Bloque 8 — Integraciones y Serverless (API Gateway, EventBridge, SNS, SQS, Lambda)
+Este bloque cubre los servicios que permiten construir arquitecturas serverless y conectar servicios entre sí mediante eventos, colas y notificaciones. Es clave para entender cómo funcionan las aplicaciones modernas en AWS.
+En este bloque encontrarás:
+- API Gateway: exponer APIs, autenticación, throttling, REST vs HTTP
+- EventBridge: bus de eventos, reglas, cron jobs, integraciones SaaS
+- SNS: publicación/suscripción (uno a muchos)
+- SQS: colas (uno a uno), desacoplamiento, retención de mensajes
+- Lambda: función serverless que ejecuta código bajo demanda
+- Arquitectura típica: API Gateway → Lambda → DynamoDB
+- Ejemplos típicos del examen
+### Integraciones y Serverless
+Puedes leer el contenido completo aquí: [Bloque_8_Integrasiones_y_Serverless.md)
+
+
+## Bloque 9 — Costos, Facturación y Arquitectura (Billing, Pricing, Well‑Architected)
+Este bloque resume cómo se calculan los costos en AWS, cómo controlar el gasto y cómo aplicar buenas prácticas de arquitectura. Es un bloque teórico pero muy importante para el examen.
+En este bloque encontrarás:
+- Modelos de precios: On‑Demand, Reserved Instances, Savings Plans, Spot
+- Herramientas de costos: Billing Dashboard, Cost Explorer, Budgets, Pricing Calculator
+- Free Tier y tipos de niveles gratuitos
+- Well‑Architected Framework: los 6 pilares
+- Shared Responsibility Model
+- TCO (Total Cost of Ownership)
+- Organizations, Control Tower, etiquetas de costos
+- Ejemplos típicos del examen
+### Costos, Facturación y Arquitectura
+Puedes leer el contenido completo aquí: [Bloque_9_Costos_Facturacion_arquitectura.md)
+
