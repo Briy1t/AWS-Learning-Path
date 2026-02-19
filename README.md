@@ -35,7 +35,7 @@ En este bloque encontrarás:
 
 El objetivo es que al terminar este bloque tengas una visión clara de cómo funciona AWS a nivel fundamental y puedas avanzar con seguridad hacia los siguientes temas.
 
-### Documentación completa del Bloque 1
+### Bloque 1
 
 Puedes leer el contenido completo aquí: [Documentación del Bloque 1](Bloque_1_Fundamentos_de_la_nube.md)
 
@@ -99,8 +99,8 @@ En este bloque encontrarás:
 - AWS Config: historial de cambios, cumplimiento de reglas, recursos NON‑COMPLIANT
 - Diferencias claras entre CloudWatch vs CloudTrail vs Config
 - Ejemplos típicos del examen
-### Monitoreo y Observabilidad
-Puedes leer el contenido completo aquí: [Bloque_7_Monitoreo_y_Obeservabilidad.md)
+### Bloque_9_Costos_Facturacion_arquitectura.md
+Puedes leer el contenido completo aquí: [Bloque_9_Costos_Facturacion_arquitectura.md](Bloque_7_Monitoreo_y_Obeservabilidad.md)
 
 
 ## Bloque 8 — Integraciones y Serverless (API Gateway, EventBridge, SNS, SQS, Lambda)
@@ -114,7 +114,7 @@ En este bloque encontrarás:
 - Arquitectura típica: API Gateway → Lambda → DynamoDB
 - Ejemplos típicos del examen
 ### Integraciones y Serverless
-Puedes leer el contenido completo aquí: [Bloque_8_Integrasiones_y_Serverless.md)
+Puedes leer el contenido completo aquí: [Integraciones y Serverless](Bloque_8_Integrasiones_y_Serverless.md)
 
 
 ## Bloque 9 — Costos, Facturación y Arquitectura (Billing, Pricing, Well‑Architected)
@@ -129,5 +129,5 @@ En este bloque encontrarás:
 - Organizations, Control Tower, etiquetas de costos
 - Ejemplos típicos del examen
 ### Costos, Facturación y Arquitectura
-Puedes leer el contenido completo aquí: [Bloque_9_Costos_Facturacion_arquitectura.md)
+Puedes leer el contenido completo aquí:[Costos, Facturación y Arquitectura](Bloque_9_Costos_Facturacion_arquitectura.md)
 
