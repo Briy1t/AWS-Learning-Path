@@ -132,7 +132,8 @@ En este bloque encontrarás:
 Puedes leer el contenido completo aquí:[Bloque 9 — Costos, Facturación y Arquitectura (Billing, Pricing, Well‑Architected)](Bloque_9_Costos_Facturacion_arquitectura.md)
 
 ----
-
+## Otros 
+- [Configuración Inicial](configuracion_inicial_practicasparaelExamen.md)
 ### Actividad de repaso 
 
 1. Primer simulacro: [Simulacro 1](Actividad_de_repaso.md)
