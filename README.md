@@ -133,8 +133,14 @@ Puedes leer el contenido completo aquí:[Bloque 9 — Costos, Facturación y Arq
 
 ----
 ## Otros 
+### Configuraciónes en AWS
 - [Configuración Inicial](configuracion_inicial_practicasparaelExamen.md)
+- [creaciondeVPC_EC2](creaciondeVPC_EC2.md)
+- [bucket_creación](bucket_creacion.md)
+
 ### Actividad de repaso 
 
 1. Primer simulacro: [Simulacro 1](Actividad_de_repaso.md)
+
+
 
