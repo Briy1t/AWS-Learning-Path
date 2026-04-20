@@ -5,7 +5,7 @@ Este documento describe el proceso completo para crear una cuenta en AWS, config
 Para crear una cuenta en AWS y acceder al Free Tier , es necesario completar un proceso de registro que incluye verificación de identidad y método de pago. A continuación se describen los pasos:
 
 ### 1. Registro inicial
-- ![](imagenes/i4.png)
+
 - Acceder a la página oficial de AWS: https://aws.amazon.com
 - Seleccionar Create an AWS Account.
 - Ingresar un correo electrónico válido y crear una contraseña.
