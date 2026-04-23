@@ -137,6 +137,7 @@ Puedes leer el contenido completo aquí:[Bloque 9 — Costos, Facturación y Arq
 - [Configuración Inicial](configuracion_inicial_practicasparaelExamen.md)
 - [creaciondeVPC_EC2](creaciondeVPC_EC2.md)
 - [bucket_creación](bucket_creacion.md)
+- [rol_personalizado.md](rol_personalizado.md)
 
 ### Actividad de repaso 
 
