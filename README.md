@@ -138,6 +138,7 @@ Puedes leer el contenido completo aquí:[Bloque 9 — Costos, Facturación y Arq
 - [creaciondeVPC_EC2](creaciondeVPC_EC2.md)
 - [bucket_creación](bucket_creacion.md)
 - [rol_personalizado.md](rol_personalizado.md)
+- [Fortress_IAM.md](Fortress_IAM.md)
 
 ### Actividad de repaso 
 
