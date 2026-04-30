@@ -139,6 +139,7 @@ Puedes leer el contenido completo aquí:[Bloque 9 — Costos, Facturación y Arq
 - [bucket_creación](bucket_creacion.md)
 - [rol_personalizado.md](rol_personalizado.md)
 - [Fortress_IAM.md](Fortress_IAM.md)
+- [Versioning_Ciclo_de_Vida_S3.md](Versioning_Ciclo_de_Vida_S3.md)
 
 ### Actividad de repaso 
 
