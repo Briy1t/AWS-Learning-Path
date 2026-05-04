@@ -44,13 +44,14 @@ Una vez dentro de la instancia Amazon Linux 2023:
 ```bash
 sudo apt update
 ```
-(Imagen 5, 6)
+- ![](imagenes/_5.png)
+- ![](imagenes/_6.png)
 
 ### 3.2. Instalación correcta (familia Red Hat)
 ```bash
 sudo dnf install httpd -y
 ```
-7 
+- ![](imagenes/_7.png)
 ## 4. Administración del servicio Apache
 - Iniciar Apache
 ```bash
@@ -80,7 +81,7 @@ sudo systemctl start httpd
   ```bash
   sudo tail -f /var/log/httpd/access_log
   ```
-  (Imagen 8)
+- ![](imagenes/_8.png)
 
 ## 5. Hardening del servidor Apache
 ### 5.1. Ocultar información del servidor
@@ -123,8 +124,10 @@ Options -Indexes +FollowSymLinks
 ```
 - Guardar y salir:
 - Ctrl + O, Enter → Ctrl + X
+- ![](imagenes/_9.png)
+- ![](imagenes/_10.png)
+- ![](imagenes/_11.png)
 
-(Imagen 9, 10, 11)
 
 ## 5.3. Configuración del Security Group
 En AWS:
@@ -139,7 +142,12 @@ Tipo: HTTP
 Puerto: 80
 Origen: 0.0.0.0/0
 ```
-(Imagen 12–16)
+- ![](imagenes/_12.png)
+- ![](imagenes/_13.png)
+- ![](imagenes/_14.png)
+- ![](imagenes/_15.png)
+- ![](imagenes/_16.png)
+
 
 ## 6. Creación del sitio web (index.html)
 ### 6.1. Crear archivo
@@ -149,7 +157,7 @@ sudo nano /var/www/html/index.html
 ### 6.2. Contenido
 Incluye tu CV digital con HTML + CSS generado parcialmente con IA para agilizar el maquetado.
 
-(Imagen 17)
+![](imagenes/_17.png)
 
 ## 7. Prueba del sitio web
 Copiar la IP pública y abrir:
@@ -165,7 +173,10 @@ no carga:
   sudo systemctl status httpd
   ```
 
-(Imagen 18–21)
+- ![](imagenes/_18.png)
+- ![](imagenes/_19.png)
+- ![](imagenes/_20.png)
+- ![](imagenes/_21.png)
 
 ## 8. Script de autocuración (Auto‑Recovery Script)
 ### 8.1. Crear archivo
@@ -185,33 +196,41 @@ if ! systemctl is-active --quiet httpd; then
 else
   echo "SISTEMA OK: Apache funcionando correctamente."
 fi
-- 22
+```
+- ![](imagenes/_22.png)
 - primera version
 - ```bahs
   chmod +x check_apache.sh
   ```
-- 23
 - cambio de version para que cuando se ejecute salga en la terminal que se ejecuto 
 
 ### 8.3. Prueba manual
-Detener Apache:
+  - Detener Apache:
 
-```bash
-sudo systemctl stop httpd
-```
+  ```bash
+  sudo systemctl stop httpd
+  ```
 
-Ejecutar script:
+- Ejecutar script:
+  
+  ```bash
+  ./check_apache.sh
+  ```
+  - Verificar:
+  
+  ```bash
+  sudo systemctl status httpd
+  ```
+--- 
 
-```bash
-./check_apache.sh
-```
-Verificar:
+- [](imagenes/_23.png)
+- [](imagenes/_24.png)
+- [](imagenes/_25.png)
+- [](imagenes/_26.png)
+- [](imagenes/_22.png)
+- [](imagenes/_28.png)
 
-```bash
-sudo systemctl status httpd
-```
-(Imagen 23–24- 25 . 26 -27 28)
-
+--- 
 ## 9. Supervisión de logs
 ```bash
 sudo tail -f /var/log/httpd/access_log
@@ -224,25 +243,32 @@ http://IP/wp-login.php
 http://IP/.env
 http://IP/config.php
 ```
-(Imagen 29)
+- [](imagenes/_29.png)
+- [](imagenes/_30.png)
+- [](imagenes/_31.png)
+- [](imagenes/_32.png)
 
 ## 10. Creación de la AMI personalizada
 ### 10.1. Crear imagen
 EC2 → Instancias → Acciones → Imágenes → Crear imagen
 
-```text
+
 Nombre: CV-Liset-Hardened-v1
 
 Descripción: Apache + CV + Hardening + Auto‑Recovery
 
-(Imagen 33–35)
+- [](imagenes/_33.png)
+- [](imagenes/_34.png)
+- [](imagenes/_35.png)
 
-10.2. Esperar estado “available”
-(Imagen 36)
 
-11. Creación de la Launch Template
+### 10.2. Esperar estado “available”
+
+- [](imagenes/_36.png)
+
+## 11. Creación de la Launch Template
 EC2 → Launch Templates → Crear plantilla
-
+```text
 AMI: CV-Liset-Hardened-v1
 
 Tipo: t3.micro
@@ -251,15 +277,18 @@ Key Pair: tu .pem
 
 SG: el que permite puerto 80
 ```
-
-(Imagen 30–32)
-
+- [](imagenes/_37.png)
+- [](imagenes/_38.png)
+- [](imagenes/_39.png)
+- [](imagenes/_40.png)
+- [](imagenes/_41.png)
+- [](imagenes/_42.png)
 ## 12. Creación del Auto Scaling Group
 ### 12.1. Nueva versión de la plantilla
 Ajustar SG correcto
 
 - Verificar VPC correcta (...bd1a4)
-(Imagen 43)
+- [](imagenes/_44.png)
 
 ### 12.2. Configuración del ASG
 ```text
@@ -269,26 +298,30 @@ Max: 3
 
 Desired: 1
 ```
-(Imagen 44–45)
+- [](imagenes/_45.png)
+
 
 - Métrica de escalado
 - CPU Utilization
 - Target: 70%
-(Imagen 46)
+- [](imagenes/_46.png)
 
-(Imagen 47–50)
+- [](imagenes/_47.png)
+- [](imagenes/_48.png)
+- [](imagenes/_49.png)
+- [](imagenes/_50.png)
 
 ## 13. Verificación del Auto Scaling
 - EC2 → Instancias
 - Aparece nueva instancia generada automáticamente
 - Probar IP pública
-(Imagen 51)
+- [](imagenes/_51.png)
 
 - no carga:
 
 - Revisar Apache
 - Revisar SG
-(Imagen 52)
+- [](imagenes/_52.png)
 
 ## 14. Corrección del estado “disabled”
 
@@ -296,12 +329,13 @@ Desired: 1
 sudo systemctl start httpd
 sudo systemctl enable httpd
 ```
-(Imagen 53–54)
+- [](imagenes/_53.png)
+- [](imagenes/_54.png)
 
 ## 15. Problemas detectados y soluciones
 1. Instancia sin SG correcto
 Verificar pestaña Security  
-(Imagen 55)
+- [](imagenes/_55.png)
 
 2. Instancia sin el CV
 La AMI usada no contenía el CV.
@@ -310,6 +344,11 @@ Solución: crear AMI desde la instancia correcta.
 3. Auto Scaling recrea instancias
 ASG detecta que la capacidad mínima no se cumple.
 
+- [](imagenes/_56.png)
+- [](imagenes/_57.png)
+- [](imagenes/_58.png)
+- [](imagenes/_59.png)
+- [](imagenes/_60.png)
 ## 16. Cómo detener el Auto Scaling Group
 Auto Scaling Groups → Seleccionar → Editar:
 ```text
@@ -318,10 +357,14 @@ Desired: 0
 Min: 0
 Max: 0
 ```
-(Imagen 61–63)
+- [](imagenes/_61.png)
+- [](imagenes/_62.png)
+- [](imagenes/_63.png)
 
 - Luego terminar instancias manualmente.
-(Imagen 64)
+- [](imagenes/_64.png)
+- [](imagenes/_65.png)
+
 
 ## 17. Mejoras pendientes
 - Crear AMI final con CV + hardening + script
@@ -331,16 +374,18 @@ Max: 0
 ## 18. Costos y uso
 Créditos restantes: 119,25 USD  
 Días restantes: 137  
-(Imagen 65 66)
+- [](imagenes/_66.png)
+- [](imagenes/_67.png)
+
 
 ### Estado actual del proyecto
-✔ EC2 configurado
-✔ Apache instalado y endurecido
-✔ CV desplegado
-✔ Script de autocuración funcionando
-✔ Logs supervisados
-✔ AMI creada
-✔ Launch Template creada
-✔ Auto Scaling Group configurado
-✔ Proyecto documentado paso a paso
-🔎Pendiente: AMI final + User Data + IAM + despliegue automático
+- ✔ EC2 configurado
+- ✔ Apache instalado y endurecido
+- ✔ CV desplegado
+- ✔ Script de autocuración funcionando
+- ✔ Logs supervisados
+- ✔ AMI creada
+- ✔ Launch Template creada
+- ✔ Auto Scaling Group configurado
+- ✔ Proyecto documentado paso a paso
+- 🔎Pendiente: AMI final + User Data + IAM + despliegue automático
