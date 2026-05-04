@@ -223,15 +223,16 @@ fi
   ```
 --- 
 
-- [](imagenes/_23.png)
-- [](imagenes/_24.png)
-- [](imagenes/_25.png)
-- [](imagenes/_26.png)
-- [](imagenes/_22.png)
-- [](imagenes/_28.png)
+- ![](imagenes/_23.png)
+- ![](imagenes/_24.png)
+- ![](imagenes/_25.png)
+- ![](imagenes/_26.png)
+- ![](imagenes/_22.png)
+- ![](imagenes/_28.png)
 
 --- 
 ## 9. Supervisión de logs
+
 ```bash
 sudo tail -f /var/log/httpd/access_log
 ```
@@ -243,10 +244,11 @@ http://IP/wp-login.php
 http://IP/.env
 http://IP/config.php
 ```
-- [](imagenes/_29.png)
-- [](imagenes/_30.png)
-- [](imagenes/_31.png)
-- [](imagenes/_32.png)
+
+- ![](imagenes/_29.png)
+- ![](imagenes/_30.png)
+- ![](imagenes/_31.png)
+- ![](imagenes/_32.png)
 
 ## 10. Creación de la AMI personalizada
 ### 10.1. Crear imagen
@@ -257,14 +259,14 @@ Nombre: CV-Liset-Hardened-v1
 
 Descripción: Apache + CV + Hardening + Auto‑Recovery
 
-- [](imagenes/_33.png)
-- [](imagenes/_34.png)
-- [](imagenes/_35.png)
+- ![](imagenes/_33.png)
+- ![](imagenes/_34.png)
+- ![](imagenes/_35.png)
 
 
 ### 10.2. Esperar estado “available”
 
-- [](imagenes/_36.png)
+- ![](imagenes/_36.png)
 
 ## 11. Creación de la Launch Template
 EC2 → Launch Templates → Crear plantilla
@@ -277,18 +279,18 @@ Key Pair: tu .pem
 
 SG: el que permite puerto 80
 ```
-- [](imagenes/_37.png)
-- [](imagenes/_38.png)
-- [](imagenes/_39.png)
-- [](imagenes/_40.png)
-- [](imagenes/_41.png)
-- [](imagenes/_42.png)
+- ![](imagenes/_37.png)
+- ![](imagenes/_38.png)
+- ![](imagenes/_39.png)
+- ![](imagenes/_40.png)
+- ![](imagenes/_41.png)
+- ![](imagenes/_42.png)
 ## 12. Creación del Auto Scaling Group
 ### 12.1. Nueva versión de la plantilla
 Ajustar SG correcto
 
 - Verificar VPC correcta (...bd1a4)
-- [](imagenes/_44.png)
+- ![](imagenes/_44.png)
 
 ### 12.2. Configuración del ASG
 ```text
@@ -298,30 +300,30 @@ Max: 3
 
 Desired: 1
 ```
-- [](imagenes/_45.png)
+- ![](imagenes/_45.png)
 
 
 - Métrica de escalado
 - CPU Utilization
 - Target: 70%
-- [](imagenes/_46.png)
+- ![](imagenes/_46.png)
 
-- [](imagenes/_47.png)
-- [](imagenes/_48.png)
-- [](imagenes/_49.png)
-- [](imagenes/_50.png)
+- ![](imagenes/_47.png)
+- ![](imagenes/_48.png)
+- ![](imagenes/_49.png)
+- ![](imagenes/_50.png)
 
 ## 13. Verificación del Auto Scaling
 - EC2 → Instancias
 - Aparece nueva instancia generada automáticamente
 - Probar IP pública
-- [](imagenes/_51.png)
+- ![](imagenes/_51.png)
 
 - no carga:
 
 - Revisar Apache
 - Revisar SG
-- [](imagenes/_52.png)
+- ![](imagenes/_52.png)
 
 ## 14. Corrección del estado “disabled”
 
@@ -329,13 +331,13 @@ Desired: 1
 sudo systemctl start httpd
 sudo systemctl enable httpd
 ```
-- [](imagenes/_53.png)
-- [](imagenes/_54.png)
+- ![](imagenes/_53.png)
+- ![](imagenes/_54.png)
 
 ## 15. Problemas detectados y soluciones
 1. Instancia sin SG correcto
 Verificar pestaña Security  
-- [](imagenes/_55.png)
+- ![](imagenes/_55.png)
 
 2. Instancia sin el CV
 La AMI usada no contenía el CV.
@@ -344,11 +346,11 @@ Solución: crear AMI desde la instancia correcta.
 3. Auto Scaling recrea instancias
 ASG detecta que la capacidad mínima no se cumple.
 
-- [](imagenes/_56.png)
-- [](imagenes/_57.png)
-- [](imagenes/_58.png)
-- [](imagenes/_59.png)
-- [](imagenes/_60.png)
+- ![](imagenes/_56.png)
+- ![](imagenes/_57.png)
+- ![](imagenes/_58.png)
+- ![](imagenes/_59.png)
+- ![](imagenes/_60.png)
 ## 16. Cómo detener el Auto Scaling Group
 Auto Scaling Groups → Seleccionar → Editar:
 ```text
@@ -357,13 +359,13 @@ Desired: 0
 Min: 0
 Max: 0
 ```
-- [](imagenes/_61.png)
-- [](imagenes/_62.png)
-- [](imagenes/_63.png)
+- ![](imagenes/_61.png)
+- ![](imagenes/_62.png)
+- ![](imagenes/_63.png)
 
 - Luego terminar instancias manualmente.
-- [](imagenes/_64.png)
-- [](imagenes/_65.png)
+- ![](imagenes/_64.png)
+- ![](imagenes/_65.png)
 
 
 ## 17. Mejoras pendientes
@@ -374,8 +376,8 @@ Max: 0
 ## 18. Costos y uso
 Créditos restantes: 119,25 USD  
 Días restantes: 137  
-- [](imagenes/_66.png)
-- [](imagenes/_67.png)
+- ![](imagenes/_66.png)
+- ![](imagenes/_67.png)
 
 
 ### Estado actual del proyecto
