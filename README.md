@@ -140,6 +140,7 @@ Puedes leer el contenido completo aquí:[Bloque 9 — Costos, Facturación y Arq
 - [rol_personalizado.md](rol_personalizado.md)
 - [Fortress_IAM.md](Fortress_IAM.md)
 - [Versioning_Ciclo_de_Vida_S3.md](Versioning_Ciclo_de_Vida_S3.md)
+- [EC2_Hardened_Node_Deployment.md](EC2_Hardened_Node_Deployment.md)
 
 ### Actividad de repaso 
 
