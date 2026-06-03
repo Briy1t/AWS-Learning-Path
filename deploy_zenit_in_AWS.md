@@ -45,7 +45,7 @@ AMI seleccionada:***Ubuntu Server 22.04 LTS***
 ## 4. Problemas con Security Groups y MSSQL
 Durante el lanzamiento, AWS generaba automáticamente la regla:
 
-img1
+![](imagenes/70.png)
 
 ```Código
 Permitir tráfico MSSQL desde 0.0.0.0/0
@@ -193,6 +193,8 @@ pip install bcrypt
 ## 14. Error 502 — Diagnóstico
 El error 502 no era de Nginx ni del disco cifrado.
 
+![](imagenes/71.png)
+
 Causa real
 FastAPI fallaba al arrancar por un error de sintaxis:
 
@@ -204,6 +206,9 @@ Faltaban paréntesis:
 ```Código
 os.getenv("ZENIT_SECRET_KEY")```
 El servicio systemd arrancaba → fallaba → quedaba “running” sin proceso → Nginx devolvía 502.
+
+## Estado del proyecto
+![](imagenes/72.png)
 
 ## 15. Servicio systemd para ZENIT
 Se creó un servicio dedicado para Uvicorn.
