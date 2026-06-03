@@ -204,10 +204,12 @@ app.add_middleware(SessionMiddleware, secret_key=os.getenv"ZENIT_SECRET_KEY")
 Faltaban paréntesis:
 
 ```Código
-os.getenv("ZENIT_SECRET_KEY")```
+os.getenv("ZENIT_SECRET_KEY")
+```
 El servicio systemd arrancaba → fallaba → quedaba “running” sin proceso → Nginx devolvía 502.
 
 ## Estado del proyecto
+
 ![](imagenes/72.png)
 
 ## 15. Servicio systemd para ZENIT
