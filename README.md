@@ -145,6 +145,7 @@ Puedes leer el contenido completo aquí:[Bloque 9 — Costos, Facturación y Arq
 ### Actividad de repaso 
 
 1. Primer simulacro: [Simulacro 1](Actividad_de_repaso.md)
+2. Deploy de zenit : [deploy_zenit_in_AWS.md](deploy_zenit_in_AWS.md)
 
 
 
